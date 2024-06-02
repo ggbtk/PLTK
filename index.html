@@ -540,13 +540,13 @@ window.onload = function() {
         transform: none;
     }
 
-    .table-header-wrap > span:first-child,
-    .table-item-wrap > span:first-child {
+    .table-header-wrap > span:nth-child(2),
+    .table-item-wrap > span:nth-child(2) {
         width: 100%; /* 모바일 화면에 맞게 조정 */
     }
 
-    .table-header-wrap > span:not(:first-child),
-    .table-item-wrap > span:not(:first-child) {
+    .table-header-wrap > span:not(:nth-child(2)),
+    .table-item-wrap > span:not(:nth-child(2)) {
         width: 15%; /* 모바일 화면에 맞게 조정 */
     }
 }
