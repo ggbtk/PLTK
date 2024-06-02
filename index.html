@@ -71,8 +71,34 @@
         </div>
     </div>
 </div>
+
+<div class="banner">
+    <a href="버튼1 링크">
+        <img src="./btn_1.png" alt="버튼 1">
+    </a>
+    <a href="버튼2 링크">
+        <img src="./btn_2.png" alt="버튼 2">
+    </a>
+</div>
+
 <style>
     footer { padding: 33px 0; text-align: center; font-size: 15px; line-height: 1.8em; color:#ffffff; background:#525252; }
+
+
+    .banner {
+        position: fixed;
+        height: 100px;
+        justify-content: center;
+        left: 0; /* 배너를 화면 가운데에 정렬 */
+        right: 0; /* 배너를 화면 가운데에 정렬 */
+        margin: auto; /* 배너를 화면 가운데에 정렬 */
+        width: 1080px;
+        bottom: 0;
+        display: flex; /* flexbox를 사용하여 자식 요소들을 가로로 배치 */
+    justify-content: space-between; /* 배너 사이에 공간을 동일하게 배분 */
+    transition: all 1s ease-in-out; /* 애니메이션 효과 설정 */
+    }
+
 </style>
 <footer>
     상호 : 풀티켓
@@ -98,6 +124,11 @@
    });
 
 window.addEventListener('resize', adjustImageMap);
+
+window.addEventListener('scroll', function() {
+    var banner = document.querySelector('.banner');
+    banner.classList.add('active'); // 스크롤 시 'active' 클래스 추가
+});
 
 function adjustImageMap() {
     var image = document.querySelector('img[usemap]');
