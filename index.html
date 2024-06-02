@@ -92,11 +92,10 @@
         left: 0; /* 배너를 화면 가운데에 정렬 */
         right: 0; /* 배너를 화면 가운데에 정렬 */
         margin: auto; /* 배너를 화면 가운데에 정렬 */
-        width: 1080px;
+        width: 100%;
         bottom: 0;
         display: flex; /* flexbox를 사용하여 자식 요소들을 가로로 배치 */
-    justify-content: space-between; /* 배너 사이에 공간을 동일하게 배분 */
-    transition: all 1s ease-in-out; /* 애니메이션 효과 설정 */
+        justify-content: space-between; /* 배너 사이에 공간을 동일하게 배분 */
     }
 
 </style>
@@ -125,10 +124,7 @@
 
 window.addEventListener('resize', adjustImageMap);
 
-window.addEventListener('scroll', function() {
-    var banner = document.querySelector('.banner');
-    banner.classList.add('active'); // 스크롤 시 'active' 클래스 추가
-});
+
 
 function adjustImageMap() {
     var image = document.querySelector('img[usemap]');
@@ -540,6 +536,13 @@ window.onload = function() {
         transform: none;
     }
 
+    .banner {
+        width: 100%; /* 모바일 화면에 맞게 조정 */
+    }
+
+    .banner img{
+        width: 100%; /* 모바일 화면에 맞게 조정 */
+    }
     .table-header-wrap > span:nth-child(2),
     .table-item-wrap > span:nth-child(2) {
         width: 100%; /* 모바일 화면에 맞게 조정 */
