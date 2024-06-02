@@ -82,7 +82,14 @@
 </div>
 
 <style>
-    footer { padding: 33px 0; text-align: center; font-size: 15px; line-height: 1.8em; color:#ffffff; background:#525252; }
+    footer { 
+        padding: 33px 0; 
+        margin: auto; /* 배너를 화면 가운데에 정렬 */
+        text-align: center; 
+        font-size: 15px; 
+        line-height: 1.8em; 
+        color:#ffffff; 
+        background:#525252; }
 
 
     .banner {
@@ -92,7 +99,7 @@
         left: 0; /* 배너를 화면 가운데에 정렬 */
         right: 0; /* 배너를 화면 가운데에 정렬 */
         margin: auto; /* 배너를 화면 가운데에 정렬 */
-        width: 100%;
+        width: 1080px;
         bottom: 0;
         display: flex; /* flexbox를 사용하여 자식 요소들을 가로로 배치 */
         justify-content: space-between; /* 배너 사이에 공간을 동일하게 배분 */
@@ -411,13 +418,11 @@ window.onload = function() {
     .table-header-wrap > span:nth-child(2) {
         width: 60%;
         text-align: center;
-        font-size: 3vw; /* 화면 배율에 따라 글자 크기 변경 */
     }
 
     .table-header-wrap > span:not(:nth-child(2)) {
         width: 20%;
         text-align: center;
-        font-size: 3vw; /* 화면 배율에 따라 글자 크기 변경 */
     }
 
 
@@ -439,13 +444,11 @@ window.onload = function() {
     .table-item-wrap strong {
         font-weight: 400;
         color: #290202;
-        font-size: 2.5vw; /* 화면 배율에 따라 글자 크기 변경 */
     }
 
     .table-item-wrap > span:nth-child(2) {
         width: 60%;
         text-align: center;
-        font-size: 2.5vw; /* 화면 배율에 따라 글자 크기 변경 */
     }
 
     .table-item-wrap > span:not(:nth-child(2)) {
@@ -454,7 +457,6 @@ window.onload = function() {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 2.5vw; /* 화면 배율에 따라 글자 크기 변경 */
     }
 
     @-webkit-keyframes gradient-bg {
@@ -501,6 +503,8 @@ window.onload = function() {
         max-height: calc(100vw * var(--mobile-max-height-ratio)); /* 뷰포트 너비에 비례 */
         margin-top: calc(100vw * var(--mobile-margin-top-ratio)); /* 뷰포트 너비에 비례 */
     }
+
+
 	
 	
 	
