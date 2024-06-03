@@ -493,13 +493,14 @@ window.onload = function() {
     }
 	
 	:root {
-    --mobile-max-height-ratio: 0.144; /* 예시 비율 */
-    --mobile-margin-top-ratio: 0.013; /* 예시 비율 */
-	--mobile-font-size-ratio: 0.009; /* 예시 비율 */
+    --mobile-max-height-ratio: 0.3; /* 예시 비율 */
+    --mobile-margin-top-ratio: 0.018; /* 예시 비율 */
+	--mobile-font-size-ratio: 0.0235; /* 예시 비율 */
 	--mobile-padding-size-ratio: 0.007; /* 예시 비율 */
 }
 	@media (max-width: 768px) {
     .table-main-wrap {
+        top: calc(100vw * 4.18); /* 뷰포트 너비에 비례 */
         max-height: calc(100vw * var(--mobile-max-height-ratio)); /* 뷰포트 너비에 비례 */
         margin-top: calc(100vw * var(--mobile-margin-top-ratio)); /* 뷰포트 너비에 비례 */
     }
@@ -559,7 +560,7 @@ window.onload = function() {
 
     .table-header-wrap > span:not(:nth-child(2)),
     .table-item-wrap > span:not(:nth-child(2)) {
-        width: 25%; /* 모바일 화면에 맞게 조정 */
+        width: 50%; /* 모바일 화면에 맞게 조정 */
     }
 }
 
